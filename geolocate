@@ -43,11 +43,6 @@ tail -n1 $tmp.response \
 	read street
 
 # store result
-	cat <<EOF
-set system.position.lon=$lon
-set system.position.lat=$lat
-set system.position.street="$street"
-EOF
 	uci batch <<EOF
 set system.position.lon=$lon
 set system.position.lat=$lat
